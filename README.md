@@ -1,10 +1,13 @@
 # LearningApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+I used Visual Studio Code and MongoDB Compass.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Once the project is open in Visual Studio Code, in the command prompt (ctrl + shift + ~) run `ng serve` and in another command prompt, run `npm run start:server` and you should be connected to the DB and you can use localhost:4200 to type in the form and see the data below the form.
 
 ## Code scaffolding
 
