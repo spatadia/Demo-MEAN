@@ -1,0 +1,103 @@
+<h2 align = 'center'>Fill Out the Form Below: </h2>
+<!-- How to comment -->
+<mat-card style='margin:1;' style='width: 37%'>
+  <form (submit)='onAddPost(postForm)' #postForm='ngForm'>
+    <mat-form-field>
+      <input
+        matInput
+        type='text'
+        name='first'
+        ngModel
+        required
+        placeholder='First Name'
+        #first='ngModel'>
+      <mat-error *ngIf='first.invalid'>Please enter your first name.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type='text'
+        name='last'
+        ngModel
+        required
+        placeholder='Last Name'
+        #last='ngModel'>
+      <mat-error *ngIf='last.invalid'>Please enter your last name.</mat-error>
+    </mat-form-field>
+    <p>
+
+        <mat-form-field>
+            <input
+              matInput
+              type='text'
+              name='email'
+              ngModel
+              required
+              placeholder='Email'
+              #email='ngModel'>
+            <mat-error *ngIf='email.invalid'>Please enter your email.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              type='text'
+              name='address'
+              ngModel
+              required
+              placeholder='Address'
+              #address='ngModel'>
+            <mat-error *ngIf='address.invalid'>Please enter a valid address.</mat-error>
+          </mat-form-field>
+    </p>
+
+    <mat-form-field>
+      <input
+        matInput
+        type='text'
+        name='city'
+        ngModel
+        required
+        placeholder='City'
+        #city='ngModel'>
+      <mat-error *ngIf='city.invalid'>Please enter a city.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type='text'
+        name='state'
+        ngModel
+        required
+        placeholder='State'
+        #state='ngModel'>
+      <mat-error *ngIf='state.invalid'>Please enter a state.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type='text'
+        name='zipc'
+        ngModel
+        required
+        maxlength='5'
+        placeholder='Zip Code'
+        #zipc='ngModel'>
+      <mat-error *ngIf='zipc.invalid'>Please enter a post title.</mat-error>
+    </mat-form-field>
+    <button
+    mat-raised-button
+    color='accent'
+    type='submit'>Save Post</button>
+  </form>
+</mat-card>
+
+<!--
+[formControlName]="emailFormControl"
+<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Please enter a valid email address.</mat-error>
+<mat-error *ngIf="emailFormControl.hasError('required')">Email is required.</mat-error>
+
+-->

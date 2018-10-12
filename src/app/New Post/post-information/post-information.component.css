@@ -1,0 +1,9 @@
+:host{
+  display: block;
+  margin: 1rem;
+}
+
+mat-expansion-panel {
+  width: 41%;
+  margin: auto;
+}
